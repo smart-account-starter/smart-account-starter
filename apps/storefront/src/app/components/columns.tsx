@@ -1,8 +1,8 @@
 "use client"
 
+import { Button } from "@repo/ui/shadcn/ui/button"
 import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown, MoreHorizontal } from "lucide-react"
-import { Button } from "@repo/ui/src/shadcn/button"
 
 export type Bundler = {
   BUNDLER_NAME: string

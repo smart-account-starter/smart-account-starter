@@ -5,7 +5,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "@repo/ui/src/shadcn/card"
+} from "@repo/ui/shadcn/ui/card"
 import { SBChart } from "./StackedBarApps"
 import { MSChart } from "./MarketshareBarApps"
 import { useAccountDeployerData } from "./useAccountDeployerData"

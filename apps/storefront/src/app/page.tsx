@@ -1,11 +1,6 @@
 import React from "react";
-import { Button } from "@repo/ui/button"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@repo/ui/card"
 import Link from 'next/link'
 import { cardData, propWalletData, demoData, accountAbstractionProviders } from './content/cardData'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWallet, faExchangeAlt, faCode } from "@fortawesome/free-solid-svg-icons";
-import { Header } from "@repo/ui/src/smart-account-starter/header";
 import AccountDeployer from "./components/AccountDeployer";
 
 const CardItem = ({ card }: { card: any }) => {

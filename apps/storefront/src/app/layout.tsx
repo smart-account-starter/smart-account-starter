@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google"
 import "../styles/globals.css"
-import { Header } from "@repo/ui/src/smart-account-starter/header"
+import { Header } from "@repo/ui/smart-account-starter/header"
+// import { Header } from "@repo/ui/src/smart-account-starter/header"
 
 const inter = Inter({ subsets: ["latin"] })
 

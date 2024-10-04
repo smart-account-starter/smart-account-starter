@@ -11,6 +11,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.9",
+    "@latest": "link:viem/@latest",
     "@repo/logger": "workspace:*",
     "@repo/ui": "workspace:*",
     "@tanstack/react-table": "^8.20.5",
@@ -18,16 +20,35 @@
     "lucide-react": "^0.447.0",
     "next": "^14.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind": "^4.0.0",
+    "viem": "^2.21.18",
+    "wagmi": "^2.12.16"
   },
   "devDependencies": {
+    "@coinbase/onchainkit": "^0.33.4",
+    "@dynamic-labs/ethereum": "^3.2.0",
+    "@dynamic-labs/sdk-react-core": "^3.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@heroicons/react": "^2.1.5",
     "@next/eslint-plugin-next": "^14.1.1",
+    "@privy-io/react-auth": "^1.88.3",
+    "@privy-io/server-auth": "^1.14.1",
+    "@rainbow-me/rainbowkit": "^2.1.7",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@tanstack/react-query": "^5.59.0",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.62",
     "@types/react-dom": "^18.2.19",
+    "@usecapsule/react-sdk": "^4.1.0",
+    "autoprefixer": "^10.x.x",
+    "chart.js": "^4.4.4",
     "highcharts-react-official": "^3.2.1",
+    "postcss": "^8.x.x",
+    "react-chartjs-2": "^5.2.0",
+    "tailwindcss": "^3.4.13",
     "typescript": "^5.3.3"
   }
 }

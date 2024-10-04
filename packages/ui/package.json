@@ -17,7 +17,11 @@
       "require": "./dist/link/index.js",
       "import": "./dist/link/index.mjs",
       "types": "./src/link/index.tsx"
-    }
+    },
+    "./card": "./src/shadcn/ui/card.tsx",
+    "./table": "./src/shadcn/ui/table.tsx",
+    "./smart-account-starter/header": "./src/smart-account-starter/header.tsx",
+    "./smart-account-starter/footer": "./src/smart-account-starter/footer.tsx"
   },
   "scripts": {
     "build": "tsup",

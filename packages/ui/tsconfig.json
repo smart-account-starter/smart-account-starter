@@ -9,7 +9,7 @@
       "@/*": ["./src/*"],
       "@/shadcn/*": ["./src/shadcn/*"],
       "@/lib/*": ["./src/lib/*"],
-      "@/smart-account-starter/*": ["./src/smart-account-starter/*"]
+      "@repo/ui/*": ["./src/*"]
     }
   },
   "include": ["."],
