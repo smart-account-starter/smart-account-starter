@@ -21,7 +21,7 @@ export function Header(props: React.PropsWithChildren) {
               </p>
 
               <div className="flex items-center justify-center mt-12">
-              <a href="/#wallets" className="bg-white text-purple-700 font-bold py-3 px-6 rounded-full shadow m-2 hover:bg-purple-100 transition duration-300">
+              <a href="/#wallets" className="bg-white text-black font-bold py-3 px-6 rounded-full shadow m-2 hover:bg-purple-100 transition duration-300">
                   Wallets
                 </a>
                 <a href="/#accounts" className="bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow m-2 hover:bg-purple-800 transition duration-300">

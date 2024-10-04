@@ -8,7 +8,7 @@ export function PrivyProviderWrapper() {
   const { ready, authenticated } = usePrivy();
   const router = useRouter();
   const { login } = useLogin({
-    onComplete: () => router.push("/dashboard"),
+    onComplete: () => router.push("/privy/dashboard"),
   });
   useEffect(() => {
     if (ready && authenticated) {
