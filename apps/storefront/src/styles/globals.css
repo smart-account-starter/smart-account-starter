@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  /* Add any other custom color variables here */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+    /* Adjust dark mode colors as needed */
+  }
+}
+@layer base {
+  h1 {
+    @apply text-3xl font-bold mb-6;
+  }
+
+  p {
+    @apply mb-4;
+  }
+}
+
+body {
+  @apply p-4;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/*
+Optimize dropdowns for mobile
+ */
+[data-radix-popper-content-wrapper] {
+  @apply w-full md:w-auto;
+}
+
+[data-radix-menu-content] {
+  @apply rounded-none md:rounded-lg;
+}
+
+[data-radix-menu-content] [role="menuitem"] {
+  @apply md:min-h-0 min-h-12;
+}
+
+.site-header > .container:before,
+.site-footer > .container:before {
+  background: radial-gradient(
+    62.87% 100% at 50% 100%,
+    theme("colors.gray.200") 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.dark .site-header > .container:before,
+.dark .site-footer > .container:before {
+  background: radial-gradient(
+    62.87% 100% at 50% 100%,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.site-footer > .container:before {
+  top: 0;
+}
