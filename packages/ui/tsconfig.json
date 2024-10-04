@@ -6,7 +6,10 @@
     "types": ["jest", "node"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"],
+      "@/shadcn/*": ["./src/shadcn/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/smart-account-starter/*": ["./src/smart-account-starter/*"]
     }
   },
   "include": ["."],
