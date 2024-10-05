@@ -67,7 +67,7 @@ export async function getTokenBalances(address: string, chainId: number): Promis
     };
 
     try {
-        const response = await fetch(fetchURL, requestOptions);
+        const response = await fetch(fetchURL as string, requestOptions);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
