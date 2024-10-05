@@ -8,11 +8,19 @@ import {
 } from "@repo/ui/shadcn/ui/card"
 import { SBChart } from "./StackedBarApps"
 import { MSChart } from "./MarketshareBarApps"
-import { useAccountDeployerData } from "./useAccountDeployerData"
 import { DataTable } from "./DataTable"
 import { Deployer, deployercolumns } from "./columns"
 import HighchartsReact from "highcharts-react-official"
 import Highcharts from "highcharts"
+import { useAccountDeployerData } from "./useAccountDeployerData"
+
+// Loading indicator component
+const LoadingIndicator = () => (
+  <div className="flex justify-center items-center p-4">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+  </div>
+)
+
 export default function AccountDeployer() {
   const { data, loading, error } = useAccountDeployerData()
   const timeframe = "week" // You might want to make this dynamic
@@ -99,6 +107,15 @@ export default function AccountDeployer() {
       return acc
     }, [] as Highcharts.SeriesOptionsType[]),
   }
+
+  if (loading) {
+    return <LoadingIndicator />
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>
+  }
+
   return (
     <>
       <DataTable

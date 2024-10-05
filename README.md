@@ -5,25 +5,48 @@
 [![React Server Components](https://img.shields.io/badge/React_Server_Components-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/blog/2020/12/21/data-fetching-with-react-server-components)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)](https://expressjs.com/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Jest](https://img.shields.io/badge/Jest-C21325?style=flat&logo=jest&logoColor=white)](https://jestjs.io/)
+
+
 [![Turborepo](https://img.shields.io/badge/Turborepo-EF4444?style=flat&logo=turborepo&logoColor=white)](https://turbo.build/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://vercel.com/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+
 [![Blockchain](https://img.shields.io/badge/Blockchain-121D33?style=flat&logo=blockchain-dot-com&logoColor=white)](https://www.blockchain.com/)
 [![Solidity](https://img.shields.io/badge/Solidity-363636?style=flat&logo=solidity&logoColor=white)](https://soliditylang.org/)
 [![Smart Contracts](https://img.shields.io/badge/Smart_Contracts-FF6600?style=flat&logo=ethereum&logoColor=white)](https://ethereum.org/en/developers/docs/smart-contracts/)
 [![DApp](https://img.shields.io/badge/DApp-3C3C3D?style=flat&logo=ethereum&logoColor=white)](https://ethereum.org/en/developers/docs/dapps/)
+
 [![GitHub last commit](https://img.shields.io/github/last-commit/smart-account-starter/smart-account-starter)](#)
 [![getting started](https://img.shields.io/badge/getting_started-guide-1D76DB)](https://github.com/smart-account-starter/smart-account-starter#getting-started)
-[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen)](#-license)
-<!-- [![security rating](https://sonarcloud.io/api/project_badges/measure?project=smart-account-starter&metric=security_rating)](https://sonarcloud.io/summary/overall?id=smart-account-starter)
-[![GitHub release](https://img.shields.io/github/v/release/smart-account-starter/smart-account-starter)](#)
-[![GitHub release date](https://img.shields.io/github/release-date/smart-account-starter/smart-account-starter)](#) -->
+
+<!-- Badge row 1 - status -->
+
+[![GitHub contributors](https://img.shields.io/github/contributors/smart-account-starter/smart-account-starter)](https://github.com/smart-account-starter/smart-account-starter/graphs/contributors)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/w/smart-account-starter/smart-account-starter)](https://github.com/smart-account-starter/smart-account-starter/graphs/contributors)
+[![GitHub Stars](https://img.shields.io/github/stars/smart-account-starter/smart-account-starter.svg)](https://github.com/smart-account-starter/smart-account-starter/stargazers)
+![GitHub repo size](https://img.shields.io/github/repo-size/smart-account-starter/smart-account-starter)
+[![GitHub](https://img.shields.io/github/license/smart-account-starter/smart-account-starter?color=blue)](https://github.com/smart-account-starter/smart-account-starter/blob/master/LICENSE.md)
+
+<!-- Badge row 2 - links and profiles -->
+
+[![Website smart-account-starter.vercel.app](https://img.shields.io/website-up-down-green-red/https/smart-account-starter.vercel.app.svg)](https://smart-account-starter.vercel.app/)
+
+<!-- Badge row 3 - detailed status -->
+
+[![GitHub pull requests by-label](https://img.shields.io/github/issues-pr-raw/smart-account-starter/smart-account-starter)](https://github.com/smart-account-starter/smart-account-starter/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues-raw/smart-account-starter/smart-account-starter.svg)](https://github.com/smart-account-starter/smart-account-starter/issues)
 
 
 # Smart Account Starter
 
 The smart account starter integrates multiple WaaS providers and smart account solutions into a single app.
+
+<p align="center">
+  <img src="https://github.com/smart-account-starter/smart-account-starter/assets/sas-logo.png" alt="Smart Account Starter" />
+</p>
+
+
 
 ⭐ Star us on GitHub — just do it!
 
