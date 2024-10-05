@@ -16,18 +16,26 @@ export function PrivyProviderWrapper() {
     }
   }, [ready, authenticated, router]);
 
+  useEffect(() => {
+    handleLogin();
+  }, []); // Empty dependency array means this effect runs once on mount
+
+  const handleLogin = async () => {
+    login();
+  };
+
   if (!ready) {
     return <div>Loading...</div>;
   }
 
   return (
     <div>
-      <button
+      {/* <button
         className="bg-violet-600 hover:bg-violet-700 py-3 px-6 text-white rounded-lg"
         onClick={login}
       >
         Log in
-      </button>
+      </button> */}
     </div>
   );
 }

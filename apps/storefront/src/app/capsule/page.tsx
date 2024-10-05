@@ -1,10 +1,10 @@
 "use client"
 // import { CapsuleDemo } from "@repo/shared-examples";
 import dynamic from "next/dynamic"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Capsule, { Environment } from "@usecapsule/react-sdk"
 import styles from "./page.module.css"
-// The following styles.css import is not needed if using a version before v3.5.0 of '@usecapsule/react-sdk'
+
 import "@usecapsule/react-sdk/styles.css"
 
 const CapsuleModal = dynamic(
@@ -20,6 +20,11 @@ const capsule = new Capsule(
 
 export default function Home(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    setIsOpen(true)
+  }, [])
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>

@@ -1,33 +1,47 @@
 "use client"
+import { useEffect, useRef, useState } from "react"
 import { useMagic } from "../context/MagicProvider"
 import { useUser } from "../context/UserContext"
 
 const ConnectButton = () => {
-  // Get the initializeWeb3 function from the Web3 context
   const { magic } = useMagic()
   const { fetchUser } = useUser()
+  const [isConnecting, setIsConnecting] = useState(false)
+  const hasAttemptedConnect = useRef(false)
 
-  // Define the event handler for the button click
   const handleConnect = async () => {
+    if (!magic) {
+      console.log("Magic not yet available")
+      return
+    }
+    setIsConnecting(true)
     try {
-      // Try to connect to the wallet using Magic's user interface
-      await magic?.wallet.connectWithUI()
+      console.log('Connecting with Magic wallet')
+      await magic.wallet.connectWithUI()
       await fetchUser()
       console.log("Connected to wallet")
     } catch (error) {
-      // Log any errors that occur during the connection process
       console.error("handleConnect:", error)
+    } finally {
+      setIsConnecting(false)
     }
   }
 
-  // Render the button component with the click event handler
+  useEffect(() => {
+    if (magic && !hasAttemptedConnect.current) {
+      hasAttemptedConnect.current = true
+      handleConnect()
+    }
+  }, [magic])
+
   return (
     <button
       type="button"
       className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block"
       onClick={handleConnect}
+      disabled={isConnecting}
     >
-      Connect
+      {isConnecting ? 'Connecting...' : 'Connect'}
     </button>
   )
 }
