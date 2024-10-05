@@ -26,10 +26,8 @@ export default function RootLayout({
   );
 
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Providers initialState={initialState}>{children}</Providers>
-      </body>
-    </html>
+    <div className={inter.className}>
+      <Providers initialState={initialState}>{children}</Providers>
+    </div>
   );
 }

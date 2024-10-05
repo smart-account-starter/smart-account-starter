@@ -44,15 +44,15 @@ export const accountAbstractionProviders = [
     title: "Zerodev",
     description: "Zerodev",
     content: "Zerodev",
-    link: "/magic-demo",
+    link: "/zerodev-magic-account",
     linkText: "Try Magic Account"
   },
   {
     title: "Alchemy Smart Account",
     description: "Alchemy Smart Account",
     content: "Alchemy Smart Account",
-    link: "https://docs.alchemy.com/docs/smart-accounts-from-scratch",
-    linkText: "View Alchemy Smart Account ↗"
+    link: "/alchemy-embedded-account",
+    linkText: "Try Embedded Account"
   },
   {
     title: "Safe",

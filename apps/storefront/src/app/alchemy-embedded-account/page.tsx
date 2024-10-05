@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import {
   useAuthModal,
   useLogout,
@@ -13,7 +14,7 @@ export default function Home() {
   const { logout } = useLogout();
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 gap-4 justify-center text-center">
+    <main className="flex flex-col items-center p-24 gap-4 justify-center text-center">
       {signerStatus.isInitializing ? (
         <>Loading...</>
       ) : user ? (
