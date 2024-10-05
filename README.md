@@ -25,6 +25,15 @@
 
 The smart account starter integrates multiple WaaS providers and smart account solutions into a single app.
 
+⭐ Star us on GitHub — just do it!
+
+[![Share](https://img.shields.io/badge/share-000000?logo=x&logoColor=white)](https://x.com/intent/tweet?text=Check%20out%20this%20project%20on%20GitHub:%20https://github.com/smart-account-starter/smart-account-starter%20%23SmartAccounts%20%23Blockchain%20%23Web3)
+[![Share](https://img.shields.io/badge/share-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/smart-account-starter/smart-account-starter)
+[![Share](https://img.shields.io/badge/share-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/smart-account-starter/smart-account-starter)
+[![Share](https://img.shields.io/badge/share-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/submit?title=Check%20out%20this%20project%20on%20GitHub:%20https://github.com/smart-account-starter/smart-account-starter)
+[![Share](https://img.shields.io/badge/share-0088CC?logo=telegram&logoColor=white)](https://t.me/share/url?url=https://github.com/smart-account-starter/smart-account-starter&text=Check%20out%20this%20project%20on%20GitHub)
+
+
   <p align="center">
     <a href="https://github.com/smart-account-starter/smart-account-starter"><strong>Explore the docs »</strong></a>
     <br />
