@@ -26,6 +26,7 @@ export async function getQuote(
                 tokenOut: tokenOut.address,
                 fee: fee,
                 amountIn: amountInConverted,
+                // @ts-ignore: BigInt literals are not available when targeting lower than ES2020.
                 sqrtPriceLimitX96: 0n
             }],
         }) as [bigint, bigint, number, bigint];

@@ -287,6 +287,9 @@ importers:
       '@uniswap/sdk-core':
         specifier: ^5.8.1
         version: 5.8.1
+      '@uniswap/v3-core':
+        specifier: ^1.0.1
+        version: 1.0.1
       '@uniswap/v3-periphery':
         specifier: ^1.4.4
         version: 1.4.4
