@@ -8,7 +8,7 @@ interface BrowserWalletIconProps {
 const BrowserWalletIcon: React.FC<BrowserWalletIconProps> = ({ width = 24, height = 24 }) => {
   return (
     <img 
-      src={browserWalletIcon} 
+      src={browserWalletIcon.src} 
       alt="Browser Wallet Icon" 
       width={width} 
       height={height}
