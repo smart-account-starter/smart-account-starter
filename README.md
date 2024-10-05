@@ -30,11 +30,11 @@ The smart account starter integrates multiple WaaS providers and smart account s
 # Apps and Packages
 
 - `api`: an [Express](https://expressjs.com/) server
-- `web`: the smart-account-starter [Next.js](https://nextjs.org/) app
+- `storefront`: the smart-account-starter [Next.js](https://nextjs.org/) app
 - `@repo/eslint-config`: ESLint configurations used throughout the monorepo
 - `@repo/jest-presets`: Jest configurations
 - `@repo/logger`: isomorphic logger (a small wrapper around console.log)
-- `@repo/ui`: a dummy React UI library (which contains `<CounterButton>` and `<Link>` components)
+- `@repo/ui`: a custom component library with Radix, Shadcn, and Tailwind
 - `@repo/typescript-config`: tsconfig.json's used throughout the monorepo
 
 
