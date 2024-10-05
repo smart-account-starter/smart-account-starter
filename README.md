@@ -43,7 +43,7 @@
 The smart account starter integrates multiple WaaS providers and smart account solutions into a single app.
 
 <p align="center">
-  <img src="https://github.com/smart-account-starter/smart-account-starter/assets/sas-logo.png" alt="Smart Account Starter" />
+  <img src="https://raw.githubusercontent.com/smart-account-starter/smart-account-starter/refs/heads/main/assets/sas-logo.png" alt="Smart Account Starter" />
 </p>
 
 
