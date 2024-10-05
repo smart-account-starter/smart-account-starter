@@ -48,7 +48,7 @@ const TokenSelectModal: React.FC<TokenSelectModalProps> = ({
                     }}
                   >
                     <img
-                      src={token.logo}
+                      src={token.logo.src}
                       alt={token.symbol}
                       className="w-8 h-8 mr-3 rounded-full"
                     />

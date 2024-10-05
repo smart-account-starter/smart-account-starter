@@ -130,8 +130,8 @@ function Swap() {
         <img
           src={
             isUSDC
-              ? usdcLogo
-              : tokenData.find((token) => token.symbol === selectedToken)?.logo
+              ? usdcLogo.src
+              : tokenData.find((token) => token.symbol === selectedToken)?.logo.src
           }
           alt={isUSDC ? "USDC" : selectedToken}
           className="h-6 w-6 mr-2 rounded-full"

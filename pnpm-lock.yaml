@@ -308,6 +308,9 @@ importers:
       highcharts-react-official:
         specifier: ^3.2.1
         version: 3.2.1(highcharts@11.4.8)(react@18.2.0)
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
       postcss:
         specifier: ^8.x.x
         version: 8.4.47

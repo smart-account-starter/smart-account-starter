@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { isAddress } from 'viem';
-import debounce from 'lodash/debounce';
+import { debounce } from 'lodash';
 
 export function useAddressValidation(address: string) {
   const [isValidAddress, setIsValidAddress] = useState<boolean | null>(null);
