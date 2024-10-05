@@ -63,9 +63,9 @@ The smart account starter integrates multiple WaaS providers and smart account s
     <br />
     <a href="https://smart-account-starter.vercel.app/">View Demo</a>
     ·
-    <a href="https://github.com/smart-account-starter/smart-account-starter/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/smart-account-starter/smart-account-starter/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="https://github.com/smart-account-starter/smart-account-starter/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/smart-account-starter/smart-account-starter/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
   </p>
 
 # WaaS Providers
