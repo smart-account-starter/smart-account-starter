@@ -1,5 +1,5 @@
 
-async function SiteLayout(props: React.PropsWithChildren) {
+async function MagicDemoLayout(props: React.PropsWithChildren) {
   return (
     <div className="flex min-h-[100vh] flex-col">
       <div>{props.children}</div>
@@ -7,4 +7,4 @@ async function SiteLayout(props: React.PropsWithChildren) {
   );
 }
 
-export default SiteLayout;
+export default MagicDemoLayout;
