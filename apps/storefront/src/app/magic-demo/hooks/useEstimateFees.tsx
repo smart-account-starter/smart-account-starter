@@ -42,6 +42,7 @@ export function useEstimateFees(
             parseUnits(minimalTransferAmount, tokenDecimals.USDC),
           ],
         }),
+        // @ts-ignore: BigInt literals are not available when targeting lower than ES2020
         value: 0n,
       };
 
@@ -106,6 +107,7 @@ export function useEstimateFees(
             parseUnits(amount, tokenDecimals.USDC),
           ],
         }),
+        // @ts-ignore
         value: 0n,
       };
 
