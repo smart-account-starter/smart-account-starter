@@ -4,7 +4,7 @@ export function Header(props: React.PropsWithChildren) {
   return (
     <div>
       <header
-        className="ezy__header3 light py-20 md:py-36 text-white"
+        className="light pt-12 pb-12 md:py-36 text-white"
         style={{
           backgroundImage: "linear-gradient(145deg, #9013fe 0%, #101a8e 100%)",
         }}

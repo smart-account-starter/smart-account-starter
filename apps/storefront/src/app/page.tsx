@@ -38,8 +38,6 @@ export default function Home(): JSX.Element {
         <Suspense fallback={<div>Loading...</div>}>
           <AccountDeployer />
         </Suspense>{" "}
-        {/* <h1 className="text-3xl font-bold mt-12 mb-6">WaaS (Wallet-as-a-Service)</h1>
-        <p>When you set out to build a smart account or a smart wallet, it can be confusing with the array of options you have, partly because the terms are loosely defined. These services have collectively raised tens of millions of dollars in funding to build smart wallet solutions.</p> */}
         <div id="wallets" className="mt-8">
           <h2 className="text-2xl font-bold mb-4">
             Wallet-as-a-Service (WaaS) Options
