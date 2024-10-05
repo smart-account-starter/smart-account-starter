@@ -7,7 +7,7 @@ import "./polyfills.ts"
 import "react-toastify/dist/ReactToastify.css"
 import App from "./App.tsx"
 
-function MagicDemoPage({ children }: React.PropsWithChildren) {
+function MagicDemoPage() {
   return (
     <main className="min-h-screen bg-black">
       <h1>Chain-Abstracted Magic Account</h1>

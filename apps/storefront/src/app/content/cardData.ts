@@ -44,8 +44,8 @@ export const accountAbstractionProviders = [
     title: "Zerodev",
     description: "Zerodev",
     content: "Zerodev",
-    link: "https://docs.zerodev.app/sdk/core-api/create-account",
-    linkText: "View Zerodev ↗"
+    link: "/magic-demo",
+    linkText: "Try Magic Account"
   },
   {
     title: "Alchemy Smart Account",
