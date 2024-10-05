@@ -11,8 +11,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@account-kit/core": "4.0.0-beta.7",
+    "@account-kit/infra": "4.0.0-beta.7",
+    "@account-kit/react": "4.0.0-beta.7",
     "@headlessui/react": "^2.1.9",
-    "@latest": "link:viem/@latest",
     "@repo/logger": "workspace:*",
     "@repo/ui": "workspace:*",
     "@tanstack/react-table": "^8.20.5",
@@ -24,12 +26,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind": "^4.0.0",
-    "viem": "^2.21.18",
-    "wagmi": "^2.12.16",
-    "web3": "^4.13.0",
-    "@account-kit/core": "4.0.0-beta.8",
-    "@account-kit/infra": "4.0.0-beta.8",
-    "@account-kit/react": "4.0.0-beta.8"
+    "viem": "2.20.0",
+    "wagmi": "2.12.7",
+    "web3": "^4.13.0"
   },
   "devDependencies": {
     "@coinbase/onchainkit": "^0.33.4",
