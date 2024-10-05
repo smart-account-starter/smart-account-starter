@@ -2,9 +2,14 @@
 import { useState, useEffect } from 'react';
 
 interface DeployerData {
-    leaderboard: any[];
+    leaderboard: LeaderboardItem[];
     deployments_chart: any[];
     accounts_chart: any[];
+}
+
+export interface LeaderboardItem {
+    DEPLOYER_NAME: string;
+    NUM_ACCOUNTS: number;
 }
 
 export function useAccountDeployerData() {

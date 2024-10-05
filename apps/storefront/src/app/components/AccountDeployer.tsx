@@ -12,7 +12,9 @@ import { DataTable } from "./DataTable"
 import { Deployer, deployercolumns } from "./columns"
 import HighchartsReact from "highcharts-react-official"
 import Highcharts from "highcharts"
-import { useAccountDeployerData } from "./useAccountDeployerData"
+import { LeaderboardItem, useAccountDeployerData } from "./useAccountDeployerData"
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
 // Loading indicator component
 const LoadingIndicator = () => (
@@ -108,6 +110,80 @@ export default function AccountDeployer() {
     }, [] as Highcharts.SeriesOptionsType[]),
   }
 
+  ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
+  const leaderboardChartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'y' as const, // This will make it a horizontal bar chart
+    plugins: {
+      legend: {
+        position: 'top' as const,
+        labels: {
+          color: '#333', // Dark gray color for legend labels
+        },
+      },
+      title: {
+        display: true,
+        text: 'Account Deployer Leaderboard',
+        color: '#333', // Dark gray color for title
+        font: {
+          size: 18,
+        },
+      },
+      tooltip: {
+        callbacks: {
+          label: (context: any) => {
+            return `Number of Accounts: ${context.raw.toLocaleString()}`;
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: {
+          color: 'rgba(0, 0, 0, 0.1)', // Light gray grid lines
+        },
+        ticks: {
+          color: '#333', // Dark gray color for x-axis labels
+        },
+      },
+      y: {
+        grid: {
+          display: false, // Remove y-axis grid lines
+        },
+        ticks: {
+          color: '#333', // Dark gray color for y-axis labels
+        },
+      },
+    },
+  };
+
+  const leaderboardChartData = {
+    labels: data?.leaderboard.map((item: LeaderboardItem) => {
+      if (item.NUM_ACCOUNTS < 500000) {
+        return `${item.DEPLOYER_NAME} (${item.NUM_ACCOUNTS.toLocaleString()})`;
+      }
+      return item.DEPLOYER_NAME;
+    }) || [],
+    datasets: [
+      {
+        label: 'Number of Accounts',
+        data: data?.leaderboard.map((item: LeaderboardItem) => item.NUM_ACCOUNTS) || [],
+        backgroundColor: 'rgba(53, 162, 235, 0.8)', // Slightly more opaque blue
+        borderColor: 'rgba(53, 162, 235, 1)',
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const formatNumber = (num: number) => {
+    if (num >= 5000) {
+      return `${Math.round(num / 1000)}k`;
+    }
+    return num.toLocaleString();
+  };
+
   if (loading) {
     return <LoadingIndicator />
   }
@@ -118,11 +194,16 @@ export default function AccountDeployer() {
 
   return (
     <>
-      <DataTable
-        columns={deployercolumns}
-        data={data?.leaderboard || []}
-        entity={false}
-      />
+      <Card className="w-full mb-8">
+        <CardHeader>
+          <CardTitle>Account Deployer Leaderboard</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="h-[400px] bg-white">
+            <Bar options={leaderboardChartOptions} data={leaderboardChartData} />
+          </div>
+        </CardContent>
+      </Card>
       <HighchartsReact highcharts={Highcharts} options={accountsChartOptions} />
       <HighchartsReact
         highcharts={Highcharts}
