@@ -227,6 +227,12 @@ importers:
         specifier: ^4.13.0
         version: 4.13.0(typescript@5.3.3)(zod@3.23.8)
     devDependencies:
+      '@biconomy/account':
+        specifier: ^4.4.6
+        version: 4.4.6(typescript@5.3.3)(viem@2.20.0)
+      '@biconomy/use-aa':
+        specifier: ^1.0.11
+        version: 1.0.11(@biconomy/account@4.4.6)(@tanstack/react-query@5.59.0)(react-dom@18.2.0)(react@18.2.0)(viem@2.20.0)(wagmi@2.12.7)
       '@coinbase/onchainkit':
         specifier: ^0.33.4
         version: 0.33.4(@types/react@18.2.62)(@xmtp/frames-validator@0.6.2)(react-dom@18.2.0)(react-native@0.74.0)(react@18.2.0)(typescript@5.3.3)(zod@3.23.8)
@@ -2170,6 +2176,35 @@ packages:
 
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  /@biconomy/account@4.4.6(typescript@5.3.3)(viem@2.20.0):
+    resolution: {integrity: sha512-ipCisN2+qs7ma1gyJwkWaeuF3B7g497ZP+PKJAzA2VjFCaxxz5fYQzYckIGiVv1eiKjSb+7bM7VQ76UU0d/uCg==}
+    peerDependencies:
+      typescript: ^5
+      viem: ^2
+    dependencies:
+      merkletreejs: 0.3.11
+      typescript: 5.3.3
+      viem: 2.20.0(typescript@5.3.3)(zod@3.23.8)
+    dev: true
+
+  /@biconomy/use-aa@1.0.11(@biconomy/account@4.4.6)(@tanstack/react-query@5.59.0)(react-dom@18.2.0)(react@18.2.0)(viem@2.20.0)(wagmi@2.12.7):
+    resolution: {integrity: sha512-ce6qW38PR/LAZtjGSL8Q3gntjrlSDgaLkToV3FGHFDFZqAb+oswJ7ILrM21n5X1JIwI80jLkYYvwK6k6J47zdQ==}
+    peerDependencies:
+      '@biconomy/account': ^4.4.5
+      '@tanstack/react-query': ^5.18.1
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      viem: ^2
+      wagmi: ^2
+    dependencies:
+      '@biconomy/account': 4.4.6(typescript@5.3.3)(viem@2.20.0)
+      '@tanstack/react-query': 5.59.0(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      viem: 2.20.0(typescript@5.3.3)(zod@3.23.8)
+      wagmi: 2.12.7(@tanstack/react-query@5.59.0)(@types/react@18.2.62)(react-dom@18.2.0)(react-native@0.74.0)(react@18.2.0)(typescript@5.3.3)(viem@2.20.0)(zod@3.23.8)
+    dev: true
 
   /@celo/base@6.1.0:
     resolution: {integrity: sha512-R6ko2QCfEU32akBsaSNsDYduktgwIKHcJ61SbR7EsXA1VE31/44Qh8kMzfgeahyk375DUCe3pJIKwx5zg1tFHg==}
@@ -11305,7 +11340,6 @@ packages:
 
   /buffer-reverse@1.0.1:
     resolution: {integrity: sha512-M87YIUBsZ6N924W57vDwT/aOu8hw7ZgdByz6ijksLjmHJELBASmYTTlNHRgjE+pTsT9oJXGaDSgqqwfdHotDUg==}
-    dev: false
 
   /buffer-to-arraybuffer@0.0.5:
     resolution: {integrity: sha512-3dthu5CYiVB1DEJp61FtApNnNndTckcqe4pFcLdvHtrpG+kcyekCJKg4MRiDcFW7A6AODnXB9U4dwQiCW5kzJQ==}
@@ -12007,7 +12041,6 @@ packages:
 
   /crypto-js@4.2.0:
     resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
-    dev: false
 
   /crypto2@2.0.0:
     resolution: {integrity: sha512-jdXdAgdILldLOF53md25FiQ6ybj2kUFTiRjs7msKTUoZrzgT/M1FPX5dYGJjbbwFls+RJIiZxNTC02DE/8y0ZQ==}
@@ -17113,7 +17146,6 @@ packages:
       crypto-js: 4.2.0
       treeify: 1.1.0
       web3-utils: 1.10.4
-    dev: false
 
   /methods@1.1.2:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
@@ -21539,7 +21571,6 @@ packages:
   /treeify@1.1.0:
     resolution: {integrity: sha512-1m4RA7xVAJrSGrrXGs0L3YTwyvBs2S8PbRHaLZAkFw7JR8oIFwYtysxlBZhYIa7xSyiYJKZ3iGrrk55cGA3i9A==}
     engines: {node: '>=0.6'}
-    dev: false
 
   /trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}

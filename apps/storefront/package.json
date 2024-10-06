@@ -31,6 +31,8 @@
     "web3": "^4.13.0"
   },
   "devDependencies": {
+    "@biconomy/account": "^4.4.6",
+    "@biconomy/use-aa": "^1.0.11",
     "@coinbase/onchainkit": "^0.33.4",
     "@dynamic-labs/ethereum": "^3.2.0",
     "@dynamic-labs/sdk-react-core": "^3.2.0",
