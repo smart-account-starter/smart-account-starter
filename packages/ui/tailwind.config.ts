@@ -7,8 +7,18 @@ const config = {
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    '../../packages/ui/src/**/*.{ts,tsx}',
-	],
+    '../../packages/ui/src/shadcn/**/*.{ts,tsx}',
+    '../../packages/ui/src/smart-account-starter/*.{ts,tsx}',
+    '../../apps/storefront/src/app/*.{ts,tsx}',
+    '../../apps/storefront/src/**/*.{ts,tsx}',
+    '../../apps/storefront/src/**/**/*.{ts,tsx}',
+  ],
+  safelist: [
+    'accordion-down',
+    'accordion-up',
+    'dark:bg-[#1E2735]',
+    'bg-slate-100',
+  ],
   theme: {
     container: {
       center: true,

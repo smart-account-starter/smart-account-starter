@@ -14,5 +14,11 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "next.config.js", "next-env.d.ts", ".next/types/**/*.ts"]
+  "include": [
+    "src",
+    "next.config.js",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "tailwind.config.ts"
+  ]
 }

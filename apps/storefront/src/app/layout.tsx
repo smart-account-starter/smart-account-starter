@@ -2,7 +2,7 @@ import { Inter } from "next/font/google"
 import "../styles/globals.css"
 import { Header } from "@repo/ui/smart-account-starter/header"
 import { Metadata } from "next";
-// import { Header } from "@repo/ui/src/smart-account-starter/header"
+import { ThemeProvider } from 'next-themes'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,10 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="container mx-auto">
-          <Header />
-          {children}
-        </div>
+        <ThemeProvider attribute="class">
+          <div className="container mx-auto">
+            <Header />
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )
