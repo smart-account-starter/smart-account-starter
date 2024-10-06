@@ -151,6 +151,8 @@ export const demoData = [
     description: "View your financial data and analytics",
     content: "Access charts, graphs, and financial insights.",
     link: "/dashboard",
-    linkText: "Go to Dashboard"
+    linkText: "Go to Dashboard",
+    githubUrl: "https://github.com/smart-account-starter/smart-account-starter",
+    docsUrl: "https://github.com/smart-account-starter/smart-account-starter",
   },
 ];

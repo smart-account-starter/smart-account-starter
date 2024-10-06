@@ -19,8 +19,8 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   const bundlerUrl = process.env.NEXT_PUBLIC_BUNDLER_URL || "";
 
   const config = getDefaultConfig({
-    appName: "Demo App",
-    projectId: "YOUR_PROJECT_ID",
+    appName: "Smart Account Starter",
+    projectId: "smart-account-starter",
     chains: [polygonAmoy],
     ssr: true,
   });
@@ -32,7 +32,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         <RainbowKitProvider>
           <BiconomyProvider
             config={{
-              biconomyPaymasterApiKey: paymasterApiKey,
+              paymasterApiKey: paymasterApiKey,
               bundlerUrl,
             }}
             queryClient={queryClient}
