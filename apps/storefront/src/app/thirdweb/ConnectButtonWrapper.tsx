@@ -2,7 +2,7 @@
 import React, { useRef, useImperativeHandle, forwardRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { client } from "./client";
-import { ThirdwebProvider } from 'thirdweb/react';
+import { ThirdwebProvider, useActiveAccount } from 'thirdweb/react';
 
 const ConnectButton = dynamic(
   () => import("thirdweb/react").then((mod) => mod.ConnectButton),
@@ -33,19 +33,31 @@ const ConnectButtonWrapper = forwardRef<ConnectButtonWrapperRef>((props, ref) =>
     setIsModalOpen(false);
   };
 
+  console.log(client);
+  const activeAccount = useActiveAccount();
+  console.log(activeAccount);
+
   return (
     <div ref={wrapperRef}>
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-            <ThirdwebProvider>
-              <ConnectEmbed
-                client={client}
-                appMetadata={{
-                  name: "Smart Account Starter",
-                  url: "https://smart-account-starter.vercel.app",
-                }}
-              />
-            </ThirdwebProvider>
+              {activeAccount ? (
+                <ConnectButton
+                  client={client}
+                  appMetadata={{
+                    name: "Example App",
+                    url: "https://example.com",
+                  }}
+                />
+              ) : (
+                <ConnectEmbed
+                  client={client}
+                  appMetadata={{
+                    name: "Smart Account Starter",
+                    url: "https://smart-account-starter.vercel.app",
+                  }}
+                />
+              )}
         </div>
       )}
     </div>
