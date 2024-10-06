@@ -72,7 +72,7 @@ export default function Modal({
                 textAlign: "center",
               }}
             >
-              Powered by ZeroDev
+              Powered by Smart Account Starter
             </Typography>
           )}
         </Box>
