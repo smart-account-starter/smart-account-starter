@@ -145,8 +145,6 @@ Don't forget to give the project a star! Thanks again!
   <img src="https://contrib.rocks/image?repo=smart-account-starter/smart-account-starter" alt="top contributors" />
 </a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- LICENSE -->
 ## License
 
