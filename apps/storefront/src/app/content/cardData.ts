@@ -35,6 +35,15 @@ export const cardData = [
     githubUrl: "https://github.com/dynamic-labs",
     docsUrl: "https://docs.dynamic.xyz/"
   },
+  {
+    title: "Web3Auth",
+    description: "Web3Auth",
+    content: "Web3Auth",
+    link: "/web3auth",
+    linkText: "View Web3Auth ↗",
+    githubUrl: "https://github.com/web3auth",
+    docsUrl: "https://docs.web3auth.io/"
+  }
 ];
 
 export const propWalletData = [
