@@ -4,28 +4,28 @@ export const cardData = [
     description: "Secure login with Privy",
     content: "Experience seamless and secure authentication.",
     link: "/privy",
-    linkText: "Try Privy Login"
+    linkText: "Try Privy"
   },
   {
     title: "Magic Link Integration",
     description: "Passwordless authentication",
     content: "Login easily with Magic Link technology.",
     link: "/magic",
-    linkText: "Use Magic Link"
+    linkText: "Try Magic Link"
   },
   {
     title: "Capsule SDK Demo",
     description: "Explore Capsule integration",
     content: "See how Capsule SDK works in action.",
     link: "/capsule",
-    linkText: "View Capsule Demo"
+    linkText: "Try Capsule"
   },
   {
     title: "Dynamic Wallet",
     description: "Dynamic Wallet",
     content: "Dynamic Wallet",
     link: "/dynamic",
-    linkText: "Try Dynamic Wallet"
+    linkText: "Try Dynamic"
   },
 ];
 
@@ -35,7 +35,7 @@ export const propWalletData = [
     description: "Create a smart wallet",
     content: "Create a smart wallet with Coinbase Smart Wallet",
     link: "/onchainkit",
-    linkText: "Create a Smart Wallet"
+    linkText: "Try Smart Wallet"
   }
 ];
 
@@ -45,7 +45,7 @@ export const accountAbstractionProviders = [
     description: "Zerodev",
     content: "Zerodev",
     link: "/zerodev-magic-account",
-    linkText: "Try Magic Account"
+    linkText: "Try Chain Abstraction"
   },
   {
     title: "Alchemy Smart Account",

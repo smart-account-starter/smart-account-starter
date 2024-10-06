@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   useAuthModal,
   useLogout,
@@ -12,6 +12,13 @@ export default function Home() {
   const { openAuthModal } = useAuthModal();
   const signerStatus = useSignerStatus();
   const { logout } = useLogout();
+  const loginButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!user && !signerStatus.isInitializing && loginButtonRef.current) {
+      loginButtonRef.current.click();
+    }
+  }, [user, signerStatus.isInitializing]);
 
   return (
     <main className="flex flex-col items-center p-24 gap-4 justify-center text-center">
@@ -26,7 +33,11 @@ export default function Home() {
           </button>
         </div>
       ) : (
-        <button className="btn btn-primary" onClick={openAuthModal}>
+        <button
+          ref={loginButtonRef}
+          className="btn btn-primary"
+          onClick={openAuthModal}
+        >
           Login
         </button>
       )}
