@@ -20,7 +20,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
   const config = getDefaultConfig({
     appName: "Smart Account Starter",
-    projectId: "smart-account-starter",
+    projectId: "YOUR_PROJECT_ID",
     chains: [polygonAmoy],
     ssr: true,
   });
