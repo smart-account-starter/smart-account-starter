@@ -9,12 +9,8 @@ function Header() {
 
   const linkStyles = "relative font-semibold text-sm leading-6 text-[#0A1524] hover:text-[#0A1524] transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-[#2f6fce] after:to-[#63bdcc] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap"
   return (
-    <header className="bg-white shadow-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-6">
+    <header>
           <ConnectButton />
-        </div>
-      </nav>
       <Dialog
         as="div"
         className="lg:hidden"

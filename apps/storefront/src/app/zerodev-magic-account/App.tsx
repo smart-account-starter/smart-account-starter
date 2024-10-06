@@ -16,7 +16,6 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col relative">
       <Header />
-      <BackgroundImage className="absolute inset-0 -z-10" />
       <main className="flex-grow container mx-auto px-4 py-8 relative">
         <div className="flex flex-col md:flex-row items-start justify-start w-full gap-4">
           <div className="w-full md:max-w-[32%] flex flex-col gap-4">
