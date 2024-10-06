@@ -55,6 +55,13 @@ export const accountAbstractionProviders = [
     linkText: "Try Embedded Account"
   },
   {
+    title: "Thirdweb Smart Wallet",
+    description: "Thirdweb Smart Wallet",
+    content: "Thirdweb Smart Wallet",
+    link: "/thirdweb",
+    linkText: "Try Thirdweb Wallet"
+  },
+  {
     title: "Safe",
     description: "Safe",
     content: "Safe",
@@ -88,13 +95,6 @@ export const accountAbstractionProviders = [
     content: "Etherspot",
     link: "https://github.com/etherspot/etherspot-prime-sdk",
     linkText: "View Etherspot ↗"
-  },
-  {
-    title: "Thirdweb Smart Wallet",
-    description: "Thirdweb Smart Wallet",
-    content: "Thirdweb Smart Wallet",
-    link: "https://thirdweb.com/explore/smart-wallet",
-    linkText: "View Thirdweb Smart Wallet ↗"
   },
   {
     title: 'Stackup',

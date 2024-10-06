@@ -10,7 +10,7 @@ const AccountDeployer = React.lazy(() => import("./components/AccountDeployer"))
 
 const CardItem = ({ card }: { card: any }) => {
   return (
-    <div className="bg-slate-100 dark:bg-[#1E2735] rounded-[20px] relative p-6 pt-12 lg:p-12 ml-6 h-full">
+    <div className="bg-slate-100 dark:bg-[#1E2735] rounded-[20px] relative p-6 pt-12 lg:p-12 md:ml-6 h-full">
       <h4 className="text-2xl font-bold mb-4">{card.title}</h4>
       <p className="opacity-70 mb-4">{card.description}</p>
       <Link
@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
   )
 
   return (
-    <div className="container mx-auto">
+    <div className="md:container mx-auto">
       <div className="p-4">
         <Suspense fallback={<div>Loading...</div>}>
           <AccountDeployer />
