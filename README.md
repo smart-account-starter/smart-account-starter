@@ -48,7 +48,7 @@ The smart account starter integrates multiple WaaS providers and smart account s
 
 
 
-⭐ Star us on GitHub — just do it!
+⭐ Star this repo if you like it! Show your support and help others hear about this open-source work.
 
 [![Share](https://img.shields.io/badge/share-000000?logo=x&logoColor=white)](https://x.com/intent/tweet?text=Check%20out%20this%20project%20on%20GitHub:%20https://github.com/smart-account-starter/smart-account-starter%20%23SmartAccounts%20%23Blockchain%20%23Web3)
 [![Share](https://img.shields.io/badge/share-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/smart-account-starter/smart-account-starter)
