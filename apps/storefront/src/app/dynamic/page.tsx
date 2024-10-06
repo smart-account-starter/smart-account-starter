@@ -26,7 +26,7 @@ function App() {
         walletConnectors: [EthereumWalletConnectors],
       }}
     >
-      <div className="w-1/2 mx-auto">
+      <div className="m:w-1/2 md:mx-auto">
         <DynamicEmbeddedWidget style={{ minHeight: 500 }} />
       </div>
     </DynamicContextProvider>
