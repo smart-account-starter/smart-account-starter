@@ -11,7 +11,12 @@ export function useTokenBalance(
 
   return useQuery({
     queryKey: ["tokenBalance", address, chainId, token],
-    queryFn: () => getTokenBalance(address!, chainId, token),
+    queryFn: () => {
+      if (address && address.startsWith('0x')) {
+        return getTokenBalance(address as `0x${string}`, chainId, token);
+      }
+      throw new Error("Invalid address");
+    },
     enabled: !!address,
     staleTime: 30000, // Consider data stale after 30 seconds
     refetchInterval: 60000, // Refetch every 60 seconds
