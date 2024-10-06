@@ -22,7 +22,7 @@ const uiConfig: AlchemyAccountsUIConfig = {
 // read more about persisting state with cookies: 
 export const config = createConfig(
   {
-    apiKey: "fLLWGNlJh-UOTcvc6nlZH5PsrBrR3cIM",     
+    apiKey: process.env.ALCHEMY_API_KEY ?? '',
     chain: sepolia,
     ssr: true, 
     storage: cookieStorage, 
