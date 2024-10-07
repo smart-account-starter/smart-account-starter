@@ -71,20 +71,20 @@ The smart account starter integrates multiple WaaS providers and smart account s
 # WaaS Providers
 
 - [Privy](https://smart-account-starter.vercel.app/privy)
-- [Magic](https://magic.link/)
-- [Dynamic](https://www.dynamic.xyz/)
-- [Capsule](https://usecapsule.com/)
+- [Magic](https://smart-account-starter.vercel.app/magic)
+- [Dynamic](https://smart-account-starter.vercel.app/dynamic)
+- [Capsule](https://smart-account-starter.vercel.app/capsule)
 
 # Smart Account Solutions
-- [Zerodev](https://zerodev.app/)
-- [Safe](https://safe.global/)
-- [Biconomy](https://www.biconomy.io/)
-- [ERC7579](https://erc7579.com/)
-- [Etherspot](https://www.etherspot.io/)
-- [Thirdweb](https://thirdweb.com/)
-- [Alchemy](https://www.alchemy.com/)
-- [Stackup](https://stackup.sh/)
-- [Pimlico](https://pimlico.io/)
+- [Zerodev](https://smart-account-starter.vercel.app/zerodev-magic-account)
+- [Alchemy](https://smart-account-starter.vercel.app/alchemy-embedded-account)
+- [Thirdweb](https://smart-account-starter.vercel.app/thirdweb)
+- [Biconomy](https://smart-account-starter.vercel.app/biconomy)
+- [Safe ↗️](https://safe.global/)
+- [ERC7579 ↗️](https://erc7579.com/)
+- [Etherspot ↗️](https://www.etherspot.io/)
+- [Stackup ↗️](https://stackup.sh/)
+- [Pimlico ↗️](https://pimlico.io/)
 
 
 
