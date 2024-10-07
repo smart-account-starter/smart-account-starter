@@ -50,5 +50,8 @@
   ],
   "dependencies": {
     "@types/react": "^18.3.11"
+  },
+  "devDependencies": {
+    "tsdx": "^0.14.1"
   }
 }
