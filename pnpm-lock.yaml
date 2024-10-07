@@ -426,6 +426,9 @@ importers:
       tsdx:
         specifier: ^0.14.1
         version: 0.14.1
+      tslib:
+        specifier: ^2.7.0
+        version: 2.7.0
 
   packages/ui:
     dependencies:

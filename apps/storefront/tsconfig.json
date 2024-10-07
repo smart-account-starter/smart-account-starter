@@ -11,7 +11,8 @@
     "baseUrl": ".",
     "paths": {
       "@repo/ui/*": ["../../packages/ui/src/*"],
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@smartacct/sdk": ["../../packages/smartacct-sdk/src/createSmartAccount.ts"]
     }
   },
   "include": [

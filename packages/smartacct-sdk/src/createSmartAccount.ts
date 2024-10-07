@@ -4,15 +4,16 @@ import { createBiconomyAccount } from './biconomy';
 import { createThirdwebAccount } from './thirdweb';
 import { createAlchemyAccount } from './alchemy';
 
-type AccountProvider = 'zerodev' | 'pimlico' | 'biconomy' | 'thirdweb' | 'alchemy';
-type SignerProvider = 'privy' | 'dynamic' | 'magic' | 'capsule';
+// Export these types so they can be used by consumers of the SDK
+export type AccountProvider = 'zerodev' | 'pimlico' | 'biconomy' | 'thirdweb' | 'alchemy';
+export type SignerProvider = 'privy' | 'dynamic' | 'magic' | 'capsule';
 
-interface Signer {
+export interface Signer {
   type: SignerProvider;
   // Add any necessary properties or methods for the signer
 }
 
-class SDK {
+export class SmartAcct {
   private accountProvider: AccountProvider;
   private signer: Signer;
 
@@ -39,22 +40,4 @@ class SDK {
   }
 }
 
-// Usage example
-const privySigner: Signer = { type: 'privy' /* add necessary properties */ };
-const dynamicSigner: Signer = { type: 'dynamic' /* add necessary properties */ };
-
-const zeroDevSDK = new SDK('zerodev', privySigner);
-const pimlicoSDK = new SDK('pimlico', dynamicSigner);
-// ... create other SDK instances with appropriate signers
-
-async function main() {
-  const zeroDevAccount = await zeroDevSDK.createAccount();
-  console.log('ZeroDev Account:', zeroDevAccount);
-
-  const pimlicoAccount = await pimlicoSDK.createAccount();
-  console.log('Pimlico Account:', pimlicoAccount);
-
-  // ... create and log other accounts
-}
-
-main().catch(console.error);
+export default SmartAcct;
