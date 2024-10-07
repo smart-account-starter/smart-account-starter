@@ -36,7 +36,7 @@
     "trailingComma": "es5"
   },
   "name": "smartacct-sdk",
-  "author": "Brian Yang",
+  "author": "cryptoB0T",
   "module": "dist/smartacct-sdk.esm.js",
   "size-limit": [
     {
@@ -49,7 +49,11 @@
     }
   ],
   "dependencies": {
-    "@types/react": "^18.3.11"
+    "@types/react": "^18.3.11",
+    "permissionless": ">=0.1.44 <=0.1.45",
+    "@zerodev/sdk": "^5.3.14",
+    "@zerodev/ecdsa-validator": "^5.3.3",
+    "viem": ">=2.16.3 <2.18.0"
   },
   "devDependencies": {
     "tsdx": "^0.14.1",
