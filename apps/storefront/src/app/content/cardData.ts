@@ -54,7 +54,7 @@ export const propWalletData = [
     link: "/onchainkit",
     linkText: "Try Smart Wallet",
     githubUrl: "https://github.com/coinbase/onchainkit",
-    docsUrl: "https://docs.coinbase.com/onchainkit"
+    docsUrl: "https://onchainkit.xyz/getting-started"
   }
 ];
 
@@ -75,7 +75,7 @@ export const accountAbstractionProviders = [
     link: "/alchemy-embedded-account",
     linkText: "Try Embedded Account",
     githubUrl: "https://github.com/alchemyplatform",
-    docsUrl: "https://docs.alchemy.com/alchemy/account-abstraction/smart-account"
+    docsUrl: "https://docs.alchemy.com/"
   },
   {
     title: "Thirdweb Smart Wallet",
@@ -90,7 +90,7 @@ export const accountAbstractionProviders = [
     title: "Biconomy",
     description: "Biconomy",
     content: "Biconomy",
-    link: "/biconomy", //https://www.biconomy.io/post/erc-7579-pioneering-a-unified-standard-for-modular-smart-accounts",
+    link: "/biconomy", 
     linkText: "Try Biconomy",
     githubUrl: "https://github.com/biconomy",
     docsUrl: "https://docs.biconomy.io/"
@@ -99,7 +99,7 @@ export const accountAbstractionProviders = [
     title: "Safe",
     description: "Safe",
     content: "Safe",
-    link: "https://github.com/safe-global/safe-smart-account", // https://github.com/safe-global/safe-core-sdk",
+    link: "https://github.com/safe-global/safe-smart-account",
     linkText: "View Safe ↗",
     githubUrl: "https://github.com/safe-global",
     docsUrl: "https://docs.safe.global/"
