@@ -70,7 +70,7 @@ The smart account starter integrates multiple WaaS providers and smart account s
 
 # WaaS Providers
 
-- [Privy](https://www.privy.io/)
+- [Privy](https://smart-account-starter.vercel.app/privy)
 - [Magic](https://magic.link/)
 - [Dynamic](https://www.dynamic.xyz/)
 - [Capsule](https://usecapsule.com/)
