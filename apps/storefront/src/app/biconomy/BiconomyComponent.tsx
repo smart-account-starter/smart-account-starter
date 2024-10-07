@@ -5,11 +5,17 @@ import {
   useUserOpWait,
 } from "@biconomy/use-aa";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useConnectModal } from '@rainbow-me/rainbowkit';
 import { encodeFunctionData, parseAbi } from "viem";
 import { polygonAmoy } from "viem/chains";
+import { useEffect, useRef, useState } from "react";
 
 export default function BiconomyComponent() {
+  const connectButtonRef = useRef<HTMLButtonElement>(null);
+  const [isButtonReady, setIsButtonReady] = useState(false);
+
   const { smartAccountAddress } = useSmartAccount();
+  const { openConnectModal } = useConnectModal();
 
   const {
     mutate,
@@ -36,6 +42,12 @@ export default function BiconomyComponent() {
         }),
       },
     });
+
+  useEffect(() => {
+    if (openConnectModal) {
+      openConnectModal();
+    }
+  }, [openConnectModal]);
 
   return (
     <div className="flex flex-col items-center gap-4">
