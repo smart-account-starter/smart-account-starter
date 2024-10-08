@@ -96,6 +96,9 @@ The smart account starter integrates multiple WaaS providers and smart account s
 # Apps and Packages
 
 - `storefront`: the smart-account-starter [Next.js](https://nextjs.org/) app
+- `smartacct`: unified SDK to create smart accounts with different WaaS providers and smart account solutions 
+- `pimwrap`: SDK to create smart accounts with [Pimlico](https://pimlico.io/)
+- `zerowrap`: SDK to create smart accounts with [ZeroDev](https://zerodev.app/)
 - `api`: an [Express](https://expressjs.com/) server
 - `@repo/eslint-config`: ESLint configurations used throughout the monorepo
 - `@repo/jest-presets`: Jest configurations
