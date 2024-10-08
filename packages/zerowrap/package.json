@@ -30,7 +30,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "zerowrap",
+  "name": "@repo/zerowrap",
   "author": "cryptoB0T",
   "module": "dist/zerowrap.esm.js",
   "size-limit": [

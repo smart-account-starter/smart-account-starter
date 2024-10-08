@@ -20,3 +20,10 @@ export {
   pimwrap,
   zerowrap,
 };
+
+// import { pimMessage } from '@repo/pimwrap';
+// import { zeroMessage } from '@repo/zerowrap';
+
+// export const smartAcctMessage = "Hello from smartacct";
+
+// export { pimMessage, zeroMessage };

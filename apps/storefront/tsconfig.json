@@ -11,7 +11,9 @@
     "baseUrl": ".",
     "paths": {
       "@repo/ui/*": ["../../packages/ui/src/*"],
-      "@smartacct": ["../../packages/smartacct/src/index.tsx"]
+      "@smartacct": ["../../packages/smartacct/src/index.tsx"],
+      "@repo/zerowrap": ["../../packages/zerowrap/src"],
+      "@repo/pimwrap": ["../../packages/pimwrap/src"]
     }
   },
   "include": [
