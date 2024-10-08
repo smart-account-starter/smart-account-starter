@@ -1,1 +1,5 @@
-export const zeroMessage = "Hello from zerowrap";
+import { main } from './create-account/main'
+
+export const ZeroWrap = {
+  main
+}

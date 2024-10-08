@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@repo/pimwrap':
+        specifier: workspace:*
+        version: link:packages/pimwrap
+      '@repo/zerowrap':
+        specifier: workspace:*
+        version: link:packages/zerowrap
     devDependencies:
       prettier:
         specifier: ^3.2.5
