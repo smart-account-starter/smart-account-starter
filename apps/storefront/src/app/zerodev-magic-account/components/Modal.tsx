@@ -1,5 +1,4 @@
 import * as React from "react";
-import Backdrop from "@mui/material/Backdrop";
 import { IconButton, Typography } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import Box from "@mui/material/Box";
@@ -42,7 +41,6 @@ export default function Modal({
       open={open}
       onClose={handleClose}
       closeAfterTransition
-      slots={{ backdrop: Backdrop }}
       slotProps={{
         backdrop: {
           timeout: 500,

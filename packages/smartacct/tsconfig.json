@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "ES2015"],
+    "sourceMap": true,
+    "types": ["jest", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@repo/zerowrap": ["../../packages/zerowrap/src"],
+      "@repo/pimwrap": ["../../packages/pimwrap/src"]
+    },
+    "jsx": "react"
+  },
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}
