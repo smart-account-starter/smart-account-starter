@@ -11,8 +11,9 @@
     "baseUrl": ".",
     "paths": {
       "@repo/ui/*": ["../../packages/ui/src/*"],
-      "@/*": ["./src/*"],
-      "@smartacct/sdk": ["../../packages/smartacct-sdk/src/createSmartAccount.ts"]
+      "@smartacct": ["../../packages/smartacct/src/index.tsx"],
+      "@repo/zerowrap": ["../../packages/zerowrap/src"],
+      "@repo/pimwrap": ["../../packages/pimwrap/src"]
     }
   },
   "include": [

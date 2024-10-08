@@ -9,6 +9,10 @@
     "test": "turbo run test",
     "typecheck": "turbo run typecheck"
   },
+  "dependencies": {
+    "@repo/pimwrap": "workspace:*",
+    "@repo/zerowrap": "workspace:*"
+  },
   "devDependencies": {
     "prettier": "^3.2.5",
     "turbo": "^2.1.3"

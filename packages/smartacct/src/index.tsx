@@ -1,8 +1,10 @@
-import React, { FC, HTMLAttributes, ReactChild } from 'react';
+import * as React from 'react';
+import * as pimwrap from '@repo/pimwrap';
+import * as zerowrap from '@repo/zerowrap';
 
+import { FC, HTMLAttributes } from 'react';
 export interface Props extends HTMLAttributes<HTMLDivElement> {
   /** custom content, defaults to 'the snozzberries taste like snozzberries' */
-  children?: ReactChild;
 }
 
 // Please do not use types off of a default export module or else Storybook Docs will suffer.
@@ -13,3 +15,15 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 export const Thing: FC<Props> = ({ children }) => {
   return <div>{children || `the snozzberries taste like snozzberries`}</div>;
 };
+
+export {
+  pimwrap,
+  zerowrap,
+};
+
+// import { pimMessage } from '@repo/pimwrap';
+// import { zeroMessage } from '@repo/zerowrap';
+
+// export const smartAcctMessage = "Hello from smartacct";
+
+// export { pimMessage, zeroMessage };

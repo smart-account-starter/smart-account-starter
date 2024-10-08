@@ -1,0 +1,1 @@
+export const pimMessage = "Hello from pimwrap";

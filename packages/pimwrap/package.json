@@ -13,16 +13,11 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
+    "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "peerDependencies": {
-    "react": ">=16"
+    "analyze": "size-limit --why"
   },
   "husky": {
     "hooks": {
@@ -35,28 +30,29 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "smartacct-sdk",
+  "name": "@repo/pimwrap",
   "author": "cryptoB0T",
-  "module": "dist/smartacct-sdk.esm.js",
+  "module": "dist/pimwrap.esm.js",
   "size-limit": [
     {
-      "path": "dist/smartacct-sdk.cjs.production.min.js",
+      "path": "dist/pimwrap.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/smartacct-sdk.esm.js",
+      "path": "dist/pimwrap.esm.js",
       "limit": "10 KB"
     }
   ],
   "dependencies": {
-    "@types/react": "^18.3.11",
-    "permissionless": ">=0.1.44 <=0.1.45",
-    "@zerodev/sdk": "^5.3.14",
-    "@zerodev/ecdsa-validator": "^5.3.3",
-    "viem": ">=2.16.3 <2.18.0"
+    "permissionless": "0.2.0-rc-5",
+    "viem": "2.20.0"
   },
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.1.6",
+    "husky": "^9.1.6",
+    "size-limit": "^11.1.6",
     "tsdx": "^0.14.1",
-    "tslib": "^2.7.0"
+    "tslib": "^2.7.0",
+    "typescript": "^3.9.10"
   }
 }
