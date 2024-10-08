@@ -40,6 +40,12 @@
 
 # Smart Account Starter
 
+The smart account starter is a strongly typed React SDK with Storybook, to connect to all the various smart account solutions. 
+
+```ts
+<SmartAcct provider={privy} account={zerodev} />
+```
+
 The smart account starter integrates multiple WaaS providers and smart account solutions into a single app.
 
 <p align="center">
