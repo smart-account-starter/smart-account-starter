@@ -1,6 +1,5 @@
 import * as React from "react"
 export function Header(props: React.PropsWithChildren) {
-  console.log('props', props)
   return (
     <div>
       <header

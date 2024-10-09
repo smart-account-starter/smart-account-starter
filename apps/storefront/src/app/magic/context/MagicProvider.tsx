@@ -40,6 +40,8 @@ function MagicProvider({ children }: { children: ReactNode }) {
 
       setMagic(magic)
       setWeb3(new Web3((magic as any).rpcProvider))
+      // wrap this await in a async function
+
     } else {
       console.error("NEXT_PUBLIC_MAGIC_API_KEY is not set")
     }
