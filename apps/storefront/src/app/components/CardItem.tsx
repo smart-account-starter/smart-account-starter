@@ -31,7 +31,6 @@ const CardItem: React.FC<CardProps> = ({ card }) => {
       <div className="flex items-center justify-between mb-4">
         <a
           href={card.link}
-          onClick={handleClick}
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block"
         >
           {card.linkText}
