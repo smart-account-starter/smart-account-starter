@@ -21,6 +21,7 @@ interface MagicContextType {
   magic: Magic | null
   web3: typeof Web3 | null
   userMetadata: UserMetadata | null
+  isLoggedIn: boolean | null
   updateUserMetadata: () => Promise<void>
 }
 
@@ -28,6 +29,7 @@ const MagicContext = createContext<MagicContextType>({
   magic: null,
   web3: null,
   userMetadata: null,
+  isLoggedIn: null,
   updateUserMetadata: async () => {},
 })
 

@@ -1,18 +1,10 @@
 "use client"
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import { useMagic } from "../context/MagicProvider"
-import { useUser } from "../context/UserContext"
 
 const ConnectButton = () => {
-  const { magic, userMetadata, isLoggedIn, updateUserMetadata } = useMagic()
-  const { user, fetchUser } = useUser()
+  const { magic, updateUserMetadata } = useMagic()
   const [isConnecting, setIsConnecting] = useState(false)
-
-  useEffect(() => {
-    if (isLoggedIn === true && !userMetadata) {
-      updateUserMetadata()
-    }
-  }, [isLoggedIn, userMetadata])
 
   const handleConnect = async () => {
     if (!magic) {
@@ -21,11 +13,8 @@ const ConnectButton = () => {
     }
     setIsConnecting(true)
     try {
-      if (!isLoggedIn) {
-        console.log('Connecting with Magic wallet')
-        await magic.wallet.connectWithUI()
-      }
-      await fetchUser()
+      console.log('Connecting with Magic wallet')
+      await magic.wallet.connectWithUI()
       await updateUserMetadata()
       console.log("Connected to wallet")
     } catch (error) {
@@ -33,23 +22,6 @@ const ConnectButton = () => {
     } finally {
       setIsConnecting(false)
     }
-  }
-
-  useEffect(() => {
-    console.log('Current userMetadata:', userMetadata)
-    console.log('Is user logged in?', isLoggedIn)
-  }, [userMetadata, isLoggedIn])
-
-  if (isLoggedIn === true && userMetadata) {
-    return (
-      <button
-        type="button"
-        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-block"
-        disabled
-      >
-        Connected ({userMetadata.email})
-      </button>
-    )
   }
 
   return (
