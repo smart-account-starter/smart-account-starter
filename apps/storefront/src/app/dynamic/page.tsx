@@ -1,10 +1,5 @@
 "use client"
-import {
-  DynamicContextProvider,
-  DynamicWidget,
-  DynamicEmbeddedWidget,
-} from "@dynamic-labs/sdk-react-core"
-import { EthereumWalletConnectors } from "@dynamic-labs/ethereum"
+import { DynamicEmbeddedWidget } from "@dynamic-labs/sdk-react-core"
 import { useEffect } from "react"
 
 function App() {
@@ -19,17 +14,9 @@ function App() {
   }, [])
 
   return (
-    <DynamicContextProvider
-      settings={{
-        environmentId:
-          process.env.NEXT_PUBLIC_DYNAMIC_LABS_ENVIRONMENT_ID ?? "",
-        walletConnectors: [EthereumWalletConnectors],
-      }}
-    >
-      <div className="w-1/2 mx-auto">
-        <DynamicEmbeddedWidget style={{ minHeight: 500 }} />
-      </div>
-    </DynamicContextProvider>
+    <div className="w-1/2 mx-auto">
+      <DynamicEmbeddedWidget style={{ minHeight: 500 }} />
+    </div>
   )
 }
 

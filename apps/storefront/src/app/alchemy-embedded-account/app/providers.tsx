@@ -5,7 +5,7 @@ import { AlchemyAccountProvider } from "@account-kit/react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { PropsWithChildren, Suspense } from "react";
 
-export const Providers = (
+export const AlchemyEmbeddedAccountProviders = (
   props: PropsWithChildren<{ initialState?: AlchemyClientState }>
 ) => {
   return (

@@ -4,13 +4,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { headers } from "next/headers";
 import "./app/globals.css";
-import { Providers } from "./app/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Embedded Accounts UI Components Quickstart NextJs Template",
-  description: "Embedded Accounts UI Components Quickstart NextJs Template",
+  title: "Alchemy Embedded Account",
+  description: "Alchemy Embedded Account",
 };
 
 export default function RootLayout({
@@ -18,16 +17,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Persist state across pages
-  // https://accountkit.alchemy.com/react/ssr#persisting-the-account-state
-  const initialState = cookieToInitialState(
-    config,
-    headers().get("cookie") ?? undefined
-  );
 
   return (
     <div className={inter.className}>
-      <Providers initialState={initialState}>{children}</Providers>
+      {children}
     </div>
   );
 }

@@ -2,8 +2,9 @@
 // import { CapsuleDemo } from "@repo/shared-examples";
 import dynamic from "next/dynamic"
 import React, { useState, useEffect } from "react"
-import Capsule, { Environment } from "@usecapsule/react-sdk"
+import Capsule,  { Environment, CapsuleWeb } from "@usecapsule/react-sdk"
 import styles from "./page.module.css"
+  // import capsule web sdk and log it
 
 import "@usecapsule/react-sdk/styles.css"
 
@@ -25,19 +26,27 @@ export default function Home(): JSX.Element {
     setIsOpen(true)
   }, [])
 
+  const capsuleWeb = new CapsuleWeb(  
+    Environment.BETA,
+    process.env.NEXT_PUBLIC_CAPSULE_API_KEY
+  )
+  console.log(capsuleWeb)
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>Capsule</h1>
         <div>
-          <button
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block"
+          { !capsuleWeb.isFullyLoggedIn() && (
+            <button
+              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block"
             onClick={() => {
               setIsOpen(true)
             }}
           >
-            Sign in with Capsule
-          </button>
+              Sign in with Capsule
+            </button>
+          )}
 
           <CapsuleModal
             capsule={capsule}
