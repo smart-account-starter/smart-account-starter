@@ -1,5 +1,5 @@
-import { PrivyProviderWrapper } from "./PrivyProviderWrapper";
+import { PrivyLogin } from "./PrivyLogin";
 
 export default function PrivyPage() {
-  return <PrivyProviderWrapper />;
+  return <PrivyLogin />;
 }

@@ -1,6 +1,6 @@
 import * as React from "react"
-
 export function Header(props: React.PropsWithChildren) {
+  console.log('props', props)
   return (
     <div>
       <header
@@ -9,15 +9,17 @@ export function Header(props: React.PropsWithChildren) {
           backgroundImage: "linear-gradient(145deg, #9013fe 0%, #101a8e 100%)",
         }}
       >
+        { props.children }
         <div className="container px-4 relative">
           <div className="grid grid-cols-12">
             <div className="col-span-12 text-center">
-              <h2 className="text-3xl leading-none md:text-[70px] font-bold mb-6">
-                <span className="block sm:inline">Welcome to the</span>{' '}
+              <h2 className="text-3xl leading-tight md:text-[70px] md:leading-tight font-bold mb-6">
+                <span className="block sm:inline">Welcome to the</span>
+                <br className="hidden sm:block" />
                 <span className="block sm:inline">Smart Account Starter</span>
               </h2>
               <p className="text-[22px] leading-normal opacity-80 px-12 md:px-44 lg:px-64">
-                Create a tool for your users to build smart accounts and wallets. Navigate the array of options in the evolving landscape of blockchain technology.
+              Your toolkit for integrating wallets and smart account solutions. 
               </p>
 
               <div className="flex items-center justify-center mt-12">
@@ -34,7 +36,6 @@ export function Header(props: React.PropsWithChildren) {
         </div>
       </header>
 
-      {props.children}
     </div>
   )
 }

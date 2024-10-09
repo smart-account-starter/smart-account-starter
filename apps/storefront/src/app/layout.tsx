@@ -3,6 +3,10 @@ import "../styles/globals.css"
 import { Header } from "@repo/ui/smart-account-starter/header"
 import { Metadata } from "next";
 import { ThemeProvider } from 'next-themes'
+import { PrivyProvider } from "@privy-io/react-auth";
+import { SmartWalletsProvider } from "@privy-io/react-auth/smart-wallets";
+import { PrivyProviderWrapper } from "./privy/PrivyProviderWrapper";
+import { PrivyStatus } from "./privy/PrivyStatus";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,12 +23,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider attribute="class">
-          <div className="md:container mx-auto">
-            <Header />
-            {children}
-          </div>
-        </ThemeProvider>
+        <PrivyProviderWrapper>
+          <ThemeProvider attribute="class">
+            <div className="md:container mx-auto">
+              <Header>
+                <PrivyStatus />
+              </Header>
+              {children}
+            </div>
+          </ThemeProvider>
+        </PrivyProviderWrapper>
       </body>
     </html>
   )
