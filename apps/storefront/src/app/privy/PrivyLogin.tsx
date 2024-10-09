@@ -1,0 +1,32 @@
+'use client';
+
+import { useLogin, usePrivy } from "@privy-io/react-auth";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+export function PrivyLogin() {
+  const { ready, authenticated } = usePrivy();
+  const router = useRouter();
+  const { login } = useLogin({
+    onComplete: () => router.push("/privy/dashboard"),
+  });
+  useEffect(() => {
+    if (ready && authenticated) {
+      router.push('/privy/dashboard');
+    }
+  }, [ready, authenticated, router]);
+
+  useEffect(() => {
+    handleLogin();
+  }, []); // Empty dependency array means this effect runs once on mount
+
+  const handleLogin = async () => {
+    login();
+  };
+
+  if (!ready) {
+    return <div>Loading...</div>;
+  }
+
+  return <div />;
+}

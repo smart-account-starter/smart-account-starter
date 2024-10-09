@@ -32,6 +32,14 @@ export default function Dashboard() {
   )
   console.log(smartWallet)
 
+  async function getAccessTokenFn(){
+    const {getAccessToken} = usePrivy();
+    const accessToken = await getAccessToken();
+    console.log(accessToken)
+  }
+
+  getAccessTokenFn()
+
   return (
     <main className="flex flex-col min-h-screen px-4 sm:px-20 py-6 sm:py-10 bg-privy-light-blue">
       {ready && authenticated ? (

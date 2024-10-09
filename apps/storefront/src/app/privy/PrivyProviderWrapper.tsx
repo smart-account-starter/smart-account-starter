@@ -1,41 +1,26 @@
 'use client';
+import { SmartWalletsProvider } from "@privy-io/react-auth/smart-wallets";
 
-import { useLogin, usePrivy } from "@privy-io/react-auth";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { PrivyProvider } from "@privy-io/react-auth";
+import { base, baseGoerli, mainnet, polygon, polygonMumbai, sepolia } from "viem/chains";
 
-export function PrivyProviderWrapper() {
-  const { ready, authenticated } = usePrivy();
-  const router = useRouter();
-  const { login } = useLogin({
-    onComplete: () => router.push("/privy/dashboard"),
-  });
-  useEffect(() => {
-    if (ready && authenticated) {
-      router.push('/privy/dashboard');
-    }
-  }, [ready, authenticated, router]);
-
-  useEffect(() => {
-    handleLogin();
-  }, []); // Empty dependency array means this effect runs once on mount
-
-  const handleLogin = async () => {
-    login();
-  };
-
-  if (!ready) {
-    return <div>Loading...</div>;
-  }
-
+export function PrivyProviderWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      {/* <button
-        className="bg-violet-600 hover:bg-violet-700 py-3 px-6 text-white rounded-lg"
-        onClick={login}
-      >
-        Log in
-      </button> */}
-    </div>
+    <PrivyProvider
+      appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID || ""}
+      config={{
+        loginMethods: ['email', 'sms', 'wallet', 'google', 'twitter', 'github', 'linkedin'],
+        defaultChain: base, 
+        supportedChains: [mainnet, sepolia, base, baseGoerli, polygon, polygonMumbai],
+        embeddedWallets: {
+          createOnLogin: "all-users",
+          // Replace this with a list of your desired supported chains
+
+        },
+        // Add other configuration options as needed
+      }}
+    >
+      <SmartWalletsProvider>{children}</SmartWalletsProvider>
+    </PrivyProvider>
   );
 }

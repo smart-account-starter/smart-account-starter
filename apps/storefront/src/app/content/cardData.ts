@@ -43,6 +43,15 @@ export const cardData = [
     linkText: "View Web3Auth ↗",
     githubUrl: "https://github.com/web3auth",
     docsUrl: "https://docs.web3auth.io/"
+  },
+  {
+    title: "Tweed",
+    description: "Compliant and seamless embedded wallets",
+    content: "Tweed",
+    link: "https://paytweed.com/wallet-as-a-service",
+    linkText: "View Tweed ↗",
+    githubUrl: "https://github.com/paytweed",
+    docsUrl: "https://docs.paytweed.com/"
   }
 ];
 
@@ -57,6 +66,11 @@ export const propWalletData = [
     docsUrl: "https://onchainkit.xyz/getting-started"
   }
 ];
+
+/* 
+https://www.rainbowkit.com/
+https://docs.reown.com/
+*/
 
 export const accountAbstractionProviders = [
   {
@@ -140,6 +154,15 @@ export const accountAbstractionProviders = [
     githubUrl: "https://github.com/stackup-wallet",
     docsUrl: "https://docs.stackup.sh/"
   },
+  {
+    title: 'Candide',
+    description: 'Candide',
+    content: 'Candide',
+    link: 'https://www.candide.dev/',
+    linkText: 'View Candide ↗',
+    githubUrl: "https://github.com/candidelabs/",
+    docsUrl: "https://docs.candide.dev/wallet/atelier-intro/"
+  }
 ]
 
 export const modularSmartAccounts = [
