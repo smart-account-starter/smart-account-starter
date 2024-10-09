@@ -11,7 +11,7 @@ export default function DisconnectButton({ onDisconnect }: DisconnectButtonProps
 
   const handleDisconnect = async () => {
     try {
-      await magic.user.logout()
+      await magic?.user.logout()
       onDisconnect()
     } catch (error) {
       console.error("Error during disconnect:", error)

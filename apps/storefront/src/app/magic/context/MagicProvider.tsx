@@ -62,7 +62,7 @@ function MagicProvider({ children }: { children: ReactNode }) {
           setIsLoggedIn(loggedIn)
           if (loggedIn) {
             const metadata = await magic.user.getMetadata()
-            setUserMetadata(metadata)
+            setUserMetadata(metadata as UserMetadata)
             console.log("User is already logged in. Metadata:", metadata)
           } else {
             console.log("User is not logged in")
@@ -82,7 +82,7 @@ function MagicProvider({ children }: { children: ReactNode }) {
     if (magic) {
       try {
         const metadata = await magic.user.getMetadata()
-        setUserMetadata(metadata)
+        setUserMetadata(metadata as UserMetadata)
         setIsLoggedIn(true)
         console.log("Updated user metadata:", metadata)
       } catch (error) {
