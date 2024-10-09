@@ -1,34 +1,51 @@
 "use client"
-import {
-  ConnectButton,
-  DisconnectButton,
-  ShowUIButton,
-  SignMessage,
-  WalletDetail,
-} from "./components/index"
-import { useUser } from "./context/UserContext"
-import SendTransaction from "./components/SendTransaction"
+import { useMagic } from "./context/MagicProvider"
 import MagicProvider from "./context/MagicProvider"
+import ConnectButton from "./components/ConnectButton"
+import WalletDetail from "./components/WalletDetail"
+import ShowUIButton from "./components/ShowUIButton"
+import SendTransaction from "./components/SendTransaction"
+import SignMessage from "./components/SignMessage"
+import DisconnectButton from "./components/DisconnectButton"
+import { useState } from "react"
 
-export default function Home() {
-  const { user } = useUser()
+export default function MagicPage() {
   return (
-    <main>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <MagicProvider>
+        <MagicContent />
+      </MagicProvider>
+    </main>
+  )
+}
 
-      <h1>Magic Link</h1>
-      {user ? (
+function MagicContent() {
+  const { isLoggedIn } = useMagic()
+
+  if (isLoggedIn === null) {
+    return <div>Loading...</div>
+  }
+
+  const [, setIsLoggedIn] = useState(false);
+
+  const handleDisconnect = () => {
+    // Assuming the DisconnectButton component handles the actual disconnection
+    setIsLoggedIn(false)
+  }
+
+  return (
+    <>
+      {isLoggedIn ? (
         <div className="p-2 flex flex-col w-[40vw] mx-auto">
           <WalletDetail />
           <ShowUIButton />
           <SendTransaction />
           <SignMessage />
-          <DisconnectButton />
+          <DisconnectButton onDisconnect={handleDisconnect} />
         </div>
       ) : (
-          <ConnectButton />
+        <ConnectButton />
       )}
-      </MagicProvider>
-    </main>
+    </>
   )
 }

@@ -1,13 +1,10 @@
 "use client"
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import { useMagic } from "../context/MagicProvider"
-import { useUser } from "../context/UserContext"
 
 const ConnectButton = () => {
-  const { magic } = useMagic()
-  const { fetchUser } = useUser()
+  const { magic, updateUserMetadata } = useMagic()
   const [isConnecting, setIsConnecting] = useState(false)
-  const hasAttemptedConnect = useRef(false)
 
   const handleConnect = async () => {
     if (!magic) {
@@ -18,7 +15,7 @@ const ConnectButton = () => {
     try {
       console.log('Connecting with Magic wallet')
       await magic.wallet.connectWithUI()
-      await fetchUser()
+      await updateUserMetadata()
       console.log("Connected to wallet")
     } catch (error) {
       console.error("handleConnect:", error)
@@ -26,13 +23,6 @@ const ConnectButton = () => {
       setIsConnecting(false)
     }
   }
-
-  useEffect(() => {
-    if (magic && !hasAttemptedConnect.current) {
-      hasAttemptedConnect.current = true
-      handleConnect()
-    }
-  }, [magic])
 
   return (
     <button
