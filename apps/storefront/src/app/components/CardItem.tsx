@@ -34,7 +34,7 @@ const CardItem: React.FC<CardProps> = ({ card }) => {
         <button
           onClick={handleClick}
           disabled={card.disabled}
-          className={`font-bold py-2 px-4 rounded inline-block ${
+          className={`font-bold py-2 px-4 rounded inline-block mr-2 ${
             card.disabled
               ? 'bg-gray-400 cursor-not-allowed'
               : 'bg-blue-500 hover:bg-blue-600 text-white'
