@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import {
   cardData,
   propWalletData,
@@ -7,7 +7,6 @@ import {
 } from "./content/cardData";
 import CardItem from "./components/CardItem";
 
-const AccountDeployer = React.lazy(() => import("./components/AccountDeployer"));
 
 export default function Home(): JSX.Element {
   const renderCards = (cards: typeof cardData): JSX.Element => (
@@ -20,10 +19,7 @@ export default function Home(): JSX.Element {
 
   return (
     <div className="md:container mx-auto">
-      <div className="p-4">
-        <Suspense fallback={<div>Loading...</div>}>
-          <AccountDeployer />
-        </Suspense>{" "}
+      <div className="">
         <div id="wallets" className="mt-8">
           <h2 className="text-2xl font-bold mb-4">
             Wallet-as-a-Service (WaaS) Options

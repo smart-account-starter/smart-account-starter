@@ -1,7 +1,10 @@
 "use client"
 import * as React from "react"
 
-export function Header(props: React.PropsWithChildren) {
+interface HeaderProps extends React.PropsWithChildren {
+  onNavigateToCharts: () => void;
+}
+export function Header({ children, onNavigateToCharts }: HeaderProps) {
   const scrollToSection = (sectionId: string) => (event: React.MouseEvent) => {
     event.preventDefault()
 
@@ -26,7 +29,6 @@ export function Header(props: React.PropsWithChildren) {
           backgroundImage: "linear-gradient(145deg, #9013fe 0%, #101a8e 100%)",
         }}
       >
-        {props.children}
         <div className="container px-4 relative">
           <div className="grid grid-cols-12">
             <div className="col-span-12 text-center">
@@ -52,6 +54,12 @@ export function Header(props: React.PropsWithChildren) {
                   className="bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow m-2 hover:bg-purple-800 transition duration-300"
                 >
                   Accounts
+                </button>
+                <button
+                  onClick={onNavigateToCharts}
+                  className="bg-white text-purple-800 font-bold py-3 px-6 rounded-full shadow m-2 hover:bg-purple-100 transition duration-300"
+                >
+                  Charts
                 </button>
               </div>
               <p className="mt-6 text-sm">

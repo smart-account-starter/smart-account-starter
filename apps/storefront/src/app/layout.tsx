@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google"
 import "../styles/globals.css"
-import { Header } from "@repo/ui/smart-account-starter/header"
 import { Metadata } from "next"
 import { ThemeProvider } from "next-themes"
 import { PrivyProviderWrapper } from "./privy/PrivyProviderWrapper"
@@ -12,6 +11,7 @@ import { config } from "./alchemy-embedded-account/config"
 import { cookieToInitialState } from "@account-kit/core"
 import { ThirdwebProvider } from "thirdweb/react"
 import { DynamicContextProviderWrapper } from "./dynamic/DynamicContextProviderWrapper"
+import { HeaderWrap } from "./HeaderWrap"
 
 const inter = Inter({ subsets: ["latin"] })
 const DynamicProviders = dynamic(
@@ -43,8 +43,8 @@ export default function RootLayout({
                   <DynamicContextProviderWrapper>
                     <ThemeProvider attribute="class">
                       <div className="md:container mx-auto">
-                        <Header />
-                        <div className="flex flex-col h-screen p-4">
+                        <HeaderWrap />
+                        <div className="flex flex-col h-screen">
                           {children}
                         </div>
                       </div>
