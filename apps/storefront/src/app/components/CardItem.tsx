@@ -27,14 +27,14 @@ const CardItem: React.FC<CardProps> = ({ card }) => {
   }, [card.link, card.disabled]);
 
   return (
-    <div className="bg-slate-100 dark:bg-[#1E2735] rounded-[20px] relative p-6 pt-12 lg:p-12 md:ml-6 h-full">
+    <div className="bg-slate-100 dark:bg-[#1E2735] rounded-[20px] relative p-4 pt-12 lg:p-12 md:ml-6 h-full">
       <h4 className="text-2xl font-bold mb-4">{card.title}</h4>
       <p className="opacity-70 mb-4">{card.description}</p>
       <div className="flex items-center justify-between mb-4">
         <button
           onClick={handleClick}
           disabled={card.disabled}
-          className={`font-bold py-2 px-4 rounded inline-block mr-2 ${
+          className={`font-bold py-2 px-4 rounded inline-block mr-4 ${
             card.disabled
               ? 'bg-gray-400 cursor-not-allowed'
               : 'bg-blue-500 hover:bg-blue-600 text-white'

@@ -44,7 +44,7 @@ export default function RootLayout({
                     <ThemeProvider attribute="class">
                       <div className="md:container mx-auto">
                         <HeaderWrap />
-                        <div className="flex flex-col h-screen p-4">
+                        <div className="flex flex-col h-screen">
                           {children}
                         </div>
                       </div>
